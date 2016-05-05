@@ -2,34 +2,34 @@
  
 int main()
 {
-   int array[100], n, c, d, position, swap;
+   int array[100], n, c, d, posicao, swap;
  
-   printf("Enter number of elements\n");
+   printf("Numero de Elementos: ");
    scanf("%d", &n);
  
-   printf("Enter %d integers\n", n);
+   printf("Insira %d numeros inteiros\n", n);
  
    for ( c = 0 ; c < n ; c++ )
       scanf("%d", &array[c]);
  
    for ( c = 0 ; c < ( n - 1 ) ; c++ )
    {
-      position = c;
+      posicao = c;
  
       for ( d = c + 1 ; d < n ; d++ )
       {
-         if ( array[position] > array[d] )
-            position = d;
+         if ( array[posicao] > array[d] )
+            posicao = d;
       }
-      if ( position != c )
+      if ( posicao != c )
       {
          swap = array[c];
-         array[c] = array[position];
-         array[position] = swap;
+         array[c] = array[posicao];
+         array[posicao] = swap;
       }
    }
  
-   printf("Sorted list in ascending order:\n");
+   printf("Lista ordenada em ordem crescente:\n");
  
    for ( c = 0 ; c < n ; c++ )
       printf("%d\n", array[c]);
